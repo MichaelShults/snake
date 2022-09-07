@@ -83,11 +83,18 @@
       <option name="presentableId" value="LOCAL‎00001" />
       <updated>1662564400482</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL‎00002" summary="Laying foundations">
+      <created>1662566600324</created>
+      <option name="number" value="LOCAL‎00002" />
+      <option name="presentableId" value="LOCAL‎00002" />
+      <updated>1662566600324</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="test commit" />
+    <MESSAGE value="Laying foundations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Laying foundations" />
   </component>
 </project>
