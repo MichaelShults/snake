@@ -131,7 +131,13 @@
       <option name="presentableId" value="LOCAL‎00009" />
       <updated>1662642299118</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL‎00010" summary="Fixed major bugs in arrow control">
+      <created>1662642941771</created>
+      <option name="number" value="LOCAL‎00010" />
+      <option name="presentableId" value="LOCAL‎00010" />
+      <updated>1662642941771</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -144,6 +150,7 @@
     <MESSAGE value="Working in MoveSnake()" />
     <MESSAGE value="Some minor fixes, now code actually runs" />
     <MESSAGE value="Added arrow control, still very buggy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added arrow control, still very buggy" />
+    <MESSAGE value="Fixed major bugs in arrow control" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed major bugs in arrow control" />
   </component>
 </project>
