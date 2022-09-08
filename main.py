@@ -78,22 +78,58 @@ class Game:
             second_block = self.snake.part_list[-2]
         old_head = self.snake.part_list[-1]
         new_head = old_head.return_copy().add(self.snake.dir.value)
+        self.update_dir(old_head, second_block)
         if self.isColliding(new_head):
             print("Game Over!")
             sys.exit()
-        if old_head.c1 > second_block.c1:
-            self.snake.dir = Direction.RIGHT
-        elif old_head.c1 < second_block.c1:
-            self.snake.dir = Direction.LEFT
-        elif old_head.c2 > second_block.c2:
-            self.snake.dir = Direction.DOWN
-        elif old_head.c2 < second_block.c2:
-            self.snake.dir = Direction.UP
         self.snake.part_list.append(new_head)
+
+    def update_dir(self, head, second_to_last):
+        if head.c1 > second_to_last.c1:
+            self.snake.dir = Direction.RIGHT
+        elif head.c1 < second_to_last.c1:
+            self.snake.dir = Direction.LEFT
+        elif head.c2 > second_to_last.c2:
+            self.snake.dir = Direction.DOWN
+        elif head.c2 < second_to_last.c2:
+            self.snake.dir = Direction.UP
 
     def blit(self):
         for part in self.snake.part_list:
             self.screen.blit(self.surface, part.tuple())
+
+    def turnSnake(self, keys):
+        new_head = self.snake.part_list[-1].return_copy()
+        if keys[pygame.K_RIGHT]:
+            if self.snake.dir == Direction.UP:
+                new_head.add(NumPair(BLOCK_SIZE, BLOCK_SIZE))
+            elif self.snake.dir == Direction.DOWN:
+                new_head.add(NumPair(BLOCK_SIZE, -BLOCK_SIZE))
+            self.snake.dir = Direction.RIGHT
+        elif keys[pygame.K_LEFT]:
+            if self.snake.dir == Direction.UP:
+                new_head.add(NumPair(-BLOCK_SIZE, BLOCK_SIZE))
+            elif self.snake.dir == Direction.DOWN:
+                new_head.add(NumPair(-BLOCK_SIZE, -BLOCK_SIZE))
+            self.snake.dir = Direction.LEFT
+        elif keys[pygame.K_UP]:
+            if self.snake.dir == Direction.RIGHT:
+                new_head.add(NumPair(-BLOCK_SIZE, -BLOCK_SIZE))
+            elif self.snake.dir == Direction.LEFT:
+                new_head.add(NumPair(-BLOCK_SIZE, BLOCK_SIZE))
+            self.snake.dir = Direction.UP
+        elif keys[pygame.K_DOWN]:
+            if self.snake.dir == Direction.RIGHT:
+                new_head.add(NumPair(-BLOCK_SIZE, BLOCK_SIZE))
+            elif self.snake.dir == Direction.LEFT:
+                new_head.add(NumPair(BLOCK_SIZE, BLOCK_SIZE))
+            self.snake.dir = Direction.DOWN
+        if self.isColliding(new_head):
+            print("Game Over!")
+            sys.exit()
+        else:
+            self.snake.part_list.pop(-1)
+            self.snake.part_list.append(new_head)
 
     def play(self):
         while True:
@@ -101,10 +137,12 @@ class Game:
                 if event.type == pygame.QUIT:
                     sys.exit()
             self.screen.fill(self.black)
+            self.turnSnake(pygame.key.get_pressed())
             self.MoveSnake()
             self.blit()
             pygame.display.flip()
             pygame.time.delay(200)
+
 
 
 

@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7954e01-48f8-463f-b538-d10bde7a281a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +119,13 @@
       <option name="presentableId" value="LOCAL‎00007" />
       <updated>1662639223856</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL‎00008" summary="Some minor fixes, now code actually runs">
+      <created>1662639585189</created>
+      <option name="number" value="LOCAL‎00008" />
+      <option name="presentableId" value="LOCAL‎00008" />
+      <updated>1662639585189</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -129,6 +136,7 @@
     <MESSAGE value="Redefining classes for better encapsulation, code still doesn't run!" />
     <MESSAGE value="Added enum type as direction indicator for the snake, and further structural changes" />
     <MESSAGE value="Working in MoveSnake()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working in MoveSnake()" />
+    <MESSAGE value="Some minor fixes, now code actually runs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some minor fixes, now code actually runs" />
   </component>
 </project>
