@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7954e01-48f8-463f-b538-d10bde7a281a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +136,19 @@
       <option name="presentableId" value="LOCAL‎00010" />
       <updated>1662642941771</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL‎00011" summary="Fixed bug with collision detection when turning">
+      <created>1662643536248</created>
+      <option name="number" value="LOCAL‎00011" />
+      <option name="presentableId" value="LOCAL‎00011" />
+      <updated>1662643536248</updated>
+    </task>
+    <task id="LOCAL‎00012" summary="Fixed minor bug: edge case where snake is length of 1">
+      <created>1662643646365</created>
+      <option name="number" value="LOCAL‎00012" />
+      <option name="presentableId" value="LOCAL‎00012" />
+      <updated>1662643646365</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -151,6 +162,8 @@
     <MESSAGE value="Some minor fixes, now code actually runs" />
     <MESSAGE value="Added arrow control, still very buggy" />
     <MESSAGE value="Fixed major bugs in arrow control" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed major bugs in arrow control" />
+    <MESSAGE value="Fixed bug with collision detection when turning" />
+    <MESSAGE value="Fixed minor bug: edge case where snake is length of 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed minor bug: edge case where snake is length of 1" />
   </component>
 </project>

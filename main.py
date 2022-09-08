@@ -53,7 +53,7 @@ class Game:
         self.size = self.width, self.height = 640, 480
         self.black = 0, 0, 0
         self.screen = pygame.display.set_mode(self.size)
-        self.snake = Snake(1)
+        self.snake = Snake(10)
         self.surface = pygame.Surface([BLOCK_SIZE, BLOCK_SIZE])
         self.surface.fill((20, 20, 20))
         self.surface.fill((244, 244, 244), self.surface.get_rect().inflate(-1, -1))
@@ -112,7 +112,7 @@ class Game:
                 new_head.add(NumPair(BLOCK_SIZE, -BLOCK_SIZE))
                 self.snake.dir = Direction.RIGHT
             else:
-                return
+                return False
         elif keys[pygame.K_LEFT]:
             if self.snake.dir == Direction.UP:
                 new_head.add(NumPair(-BLOCK_SIZE, BLOCK_SIZE))
@@ -121,7 +121,7 @@ class Game:
                 new_head.add(NumPair(-BLOCK_SIZE, -BLOCK_SIZE))
                 self.snake.dir = Direction.LEFT
             else:
-                return
+                return False
         elif keys[pygame.K_UP]:
             if self.snake.dir == Direction.RIGHT:
                 new_head.add(NumPair(-BLOCK_SIZE, -BLOCK_SIZE))
@@ -130,7 +130,7 @@ class Game:
                 new_head.add(NumPair(BLOCK_SIZE, -BLOCK_SIZE))
                 self.snake.dir = Direction.UP
             else:
-                return
+                return False
         elif keys[pygame.K_DOWN]:
             if self.snake.dir == Direction.RIGHT:
                 new_head.add(NumPair(-BLOCK_SIZE, BLOCK_SIZE))
@@ -139,15 +139,16 @@ class Game:
                 new_head.add(NumPair(BLOCK_SIZE, BLOCK_SIZE))
                 self.snake.dir = Direction.DOWN
             else:
-                return
+                return False
         else:
-            return
+            return False
         if self.isColliding(new_head):
             print("Game Over!")
             sys.exit()
         else:
             self.snake.part_list.pop(-1)
             self.snake.part_list.append(new_head)
+            return True
 
     def play(self):
         clock = pygame.time.Clock()
@@ -156,8 +157,8 @@ class Game:
                 if event.type == pygame.QUIT:
                     sys.exit()
             self.screen.fill(self.black)
-            self.turnSnake(pygame.key.get_pressed())
-            self.MoveSnake()
+            if not self.turnSnake(pygame.key.get_pressed()):
+                self.MoveSnake()
             self.blit()
             pygame.display.flip()
             clock.tick(10)
