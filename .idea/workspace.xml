@@ -107,7 +107,13 @@
       <option name="presentableId" value="LOCAL‎00005" />
       <updated>1662636737105</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL‎00006" summary="Added enum type as direction indicator for the snake, and further structural changes">
+      <created>1662637599539</created>
+      <option name="number" value="LOCAL‎00006" />
+      <option name="presentableId" value="LOCAL‎00006" />
+      <updated>1662637599539</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -116,6 +122,7 @@
     <MESSAGE value="Working on defining classes, overall structure" />
     <MESSAGE value="made some progress" />
     <MESSAGE value="Redefining classes for better encapsulation, code still doesn't run!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Redefining classes for better encapsulation, code still doesn't run!" />
+    <MESSAGE value="Added enum type as direction indicator for the snake, and further structural changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added enum type as direction indicator for the snake, and further structural changes" />
   </component>
 </project>

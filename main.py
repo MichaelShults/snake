@@ -1,6 +1,7 @@
 import sys
 import pygame
 from enum import Enum
+import copy
 BLOCK_SIZE = 10
 
 #in place
@@ -12,16 +13,24 @@ class NumPair:
     def add(self, other):
         self.c1 = self.c1 + other.c1
         self.c2 = self.c2 + other.c2
+        return self
 
     def neg(self):
         self.c1 = -self.c1
         self.c1 = -self.c2
+        return self
 
     def neg_c1(self):
         self.c1 = -self.c1
+        return self
 
     def neg_c2(self):
         self.c2 = -self.c2
+        return self
+
+    def return_copy(self):
+        return copy.copy(self)
+
 class Direction(Enum):
     LEFT = NumPair(0, -BLOCK_SIZE)
     RIGHT = NumPair(0, BLOCK_SIZE)
@@ -31,9 +40,6 @@ class Snake:
     def __init__(self, snake_length):
         self.part_list = [NumPair(0, i * BLOCK_SIZE) for i in range(snake_length)]
         self.dir = Direction.DOWN
-    def update_dir(self, ):
-
-
 
 class Game:
     def __init__(self):
@@ -55,17 +61,32 @@ class Game:
             return False
 
     def MoveSnake(self):
-        head = self.snake.part_list.pop(0)
+        tail = self.snake.part_list.pop(0)
         if len(self.snake.part_list) == 0:
-            head.add(self.snake.dir)
-            if self.isColliding(head):
+            tail.add(self.snake.dir)
+            if self.isColliding(tail):
                 print("Game Over!")
+                sys.exit()
             else:
-                self.snake.part_list.append(head)
-        elif len(self.part_list) == 1:
-            self.snake.dir
-        else:
-
+                self.snake.part_list.append(tail)
+                return
+        second_block = tail
+        if len(self.snake.part_list) > 1:
+            second_block = self.snake.part_list[-2]
+        old_head = self.snake.part_list[-1]
+        new_head = old_head.return_copy().add(self.snake.dir.value)
+        if self.isColliding(new_head):
+            print("Game Over!")
+            sys.exit()
+        if old_head.c1 > second_block.c1:
+            self.snake.dir = Direction.RIGHT
+        elif old_head.c1 < second_block.c1:
+            self.snake.dir = Direction.LEFT
+        elif old_head.c2 > second_block.c2:
+            self.snake.dir = Direction.DOWN
+        elif old_head.c2 < second_block.c2:
+            self.snake.dir = Direction.UP
+        self.snake.part_list.append(new_head)
 
     def play(self):
         while True:
