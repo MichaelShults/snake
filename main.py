@@ -50,10 +50,10 @@ class Snake:
 class Game:
     def __init__(self):
         pygame.init()
-        self.size = self.width, self.height = 640, 480
+        self.size = self.width, self.height = 700, 700
         self.black = 0, 0, 0
         self.screen = pygame.display.set_mode(self.size)
-        self.snake = Snake(10)
+        self.snake = Snake(50)
         self.surface = pygame.Surface([BLOCK_SIZE, BLOCK_SIZE])
         self.surface.fill((20, 20, 20))
         self.surface.fill((244, 244, 244), self.surface.get_rect().inflate(-1, -1))
@@ -156,12 +156,18 @@ class Game:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     sys.exit()
+
             self.screen.fill(self.black)
             if not self.turnSnake(pygame.key.get_pressed()):
                 self.MoveSnake()
-            self.blit()
-            pygame.display.flip()
-            clock.tick(10)
+                self.blit()
+                pygame.display.flip()
+                clock.tick(20)
+            else:
+                self.blit()
+                pygame.display.flip()
+                clock.tick(25)
+
 
 
 

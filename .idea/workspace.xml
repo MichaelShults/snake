@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7954e01-48f8-463f-b538-d10bde7a281a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,7 +149,13 @@
       <option name="presentableId" value="LOCAL‎00012" />
       <updated>1662643646365</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL‎00013" summary="fixed bug of interaction between turn() and move(), for smoother and more desirable snake animation">
+      <created>1662643965725</created>
+      <option name="number" value="LOCAL‎00013" />
+      <option name="presentableId" value="LOCAL‎00013" />
+      <updated>1662643965725</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -164,6 +171,7 @@
     <MESSAGE value="Fixed major bugs in arrow control" />
     <MESSAGE value="Fixed bug with collision detection when turning" />
     <MESSAGE value="Fixed minor bug: edge case where snake is length of 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed minor bug: edge case where snake is length of 1" />
+    <MESSAGE value="fixed bug of interaction between turn() and move(), for smoother and more desirable snake animation" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bug of interaction between turn() and move(), for smoother and more desirable snake animation" />
   </component>
 </project>
