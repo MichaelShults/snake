@@ -125,7 +125,13 @@
       <option name="presentableId" value="LOCAL‎00008" />
       <updated>1662639585189</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL‎00009" summary="Added arrow control, still very buggy">
+      <created>1662642299118</created>
+      <option name="number" value="LOCAL‎00009" />
+      <option name="presentableId" value="LOCAL‎00009" />
+      <updated>1662642299118</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -137,6 +143,7 @@
     <MESSAGE value="Added enum type as direction indicator for the snake, and further structural changes" />
     <MESSAGE value="Working in MoveSnake()" />
     <MESSAGE value="Some minor fixes, now code actually runs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some minor fixes, now code actually runs" />
+    <MESSAGE value="Added arrow control, still very buggy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added arrow control, still very buggy" />
   </component>
 </project>
