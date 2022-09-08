@@ -53,7 +53,7 @@ class Game:
         self.size = self.width, self.height = 640, 480
         self.black = 0, 0, 0
         self.screen = pygame.display.set_mode(self.size)
-        self.snake = Snake(10)
+        self.snake = Snake(1)
         self.surface = pygame.Surface([BLOCK_SIZE, BLOCK_SIZE])
         self.surface.fill((20, 20, 20))
         self.surface.fill((244, 244, 244), self.surface.get_rect().inflate(-1, -1))
@@ -69,7 +69,7 @@ class Game:
     def MoveSnake(self):
         tail = self.snake.part_list.pop(0)
         if len(self.snake.part_list) == 0:
-            tail.add(self.snake.dir)
+            tail.add(self.snake.dir.value)
             if self.isColliding(tail):
                 print("Game Over!")
                 sys.exit()
