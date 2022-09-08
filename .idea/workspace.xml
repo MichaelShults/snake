@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e7954e01-48f8-463f-b538-d10bde7a281a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,12 +88,19 @@
       <option name="presentableId" value="LOCAL‎00002" />
       <updated>1662566600324</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL‎00003" summary="Working on defining classes, overall structure">
+      <created>1662569911587</created>
+      <option name="number" value="LOCAL‎00003" />
+      <option name="presentableId" value="LOCAL‎00003" />
+      <updated>1662569911587</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test commit" />
     <MESSAGE value="Laying foundations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Laying foundations" />
+    <MESSAGE value="Working on defining classes, overall structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on defining classes, overall structure" />
   </component>
 </project>
